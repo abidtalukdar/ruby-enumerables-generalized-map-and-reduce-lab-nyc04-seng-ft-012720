@@ -11,8 +11,12 @@ end
 def reduce(source_array, starting_point = nil)
   if starting_point
     ret = starting_point
+    i = 0 
+  else 
+    ret = source_array[0]
+    i = 1
   end  
-  i = 0 
+  
   while i < source_array.length do
     ret += yield(source_array[i])
     i += 1
